@@ -426,6 +426,8 @@
        -webkit-background-clip: text;
        color: transparent; 
        border-radius: 10px;
+       color: purple;
+       font-weight: bolder;
 
 
 
@@ -453,6 +455,7 @@
         font-family: VogueAvantGarde, helvetica, sans-serif;
         font-weight: 400;
         font-style: normal;
+        color: orangered;
 
     }
             
@@ -668,7 +671,7 @@
 
 <div class="banner-container">
     <video autoplay loop muted>
-        <source src="{% static '/videos/banner.mp4' %}" type="video/mp4">
+        <source src="{% static '/videos/video1.mp4' %}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="banner-text">
@@ -694,10 +697,12 @@
     <div class="card-body">
         <a href="">Technologies</a>
         <h5 class="card-title">TOP 11 FUTURE MILITARY DRONES</h5>
-        <p class="card-text">The top 11 drones redefining 
-            military strategy and technological superiority
-            
-        </p>
+        <a href="{% url 'future_military' %}" class="thrdbox-link">
+            <p class="thrdbox-text">
+                The top 11 drones redefining 
+                military strategy and technological superiority
+            </p>
+        </a>
         <p class="card-footer">Last updated 3 mins ago</p>
     </div>
 </div>
@@ -726,10 +731,11 @@
                     <a href="">Technologies</a>
                     <h5 class="title">PARADIGM SHIFT IN MARITIME
                         WARFARE</h5>
-                    <p class="thrdbox-text">The degree of maritime supremacy, where 
-                        the opposing force is incapable of effective 
-                        interference, will change with the role of 
-                        Unmanned Combat Aerial Vehicles (UCAVs)</p>
+                        <a href="{% url 'singlepage' %}" target="_blank"> <p class="thrdbox-text">
+                            The degree of maritime supremacy, where the opposing force is incapable of effective interference, will change with the role of 
+                              Unmanned Combat Aerial Vehicles (UCAVs)
+                          </p>
+                        </a>
                     <p class="card-footer">Last updated 3 mins ago</p>
                 </div>
             </div>
@@ -740,9 +746,13 @@
                     <a href="">Technologies</a>
                     <h5 class="title">HOW TO BECOME THE NEXT TECH
                         UNICORN</h5>
-                    <p class="thrdbox-text">Key steps and considerations that can help tech 
-                        startups navigate the complex journey towards 
-                        becoming the next unicorn</p>
+                        <a href="{% url 'next_unicorn' %}" class="thrdbox-link">
+                            <p class="thrdbox-text">
+                                Key steps and considerations that can help tech 
+                                startups navigate the complex journey towards 
+                                becoming the next unicorn
+                            </p>
+                        </a>
                     <p class="card-footer">Last updated 3 mins ago</p>
                 </div>
             </div>
@@ -830,9 +840,13 @@
                     <a href="">Technologies</a>
                     <h5 class="title">TOP 10 AI STARTUPS OF 
                         INDIA 2025</h5>
-                    <p class="thrdbox-text">Considering age, last year’s revenue,
-                        type of technology and reviews</p>
-                    <p class="card-footer">Last updated 3 mins ago</p>
+                    <a href="{% url 'AI_STARTUPS' %}" class="thrdbox-link">
+                        <p class="thrdbox-text">
+                            Considering age, last year’s revenue,
+                        type of technology and reviews
+                        </p>
+                        <p class="card-footer">Last updated 3 mins ago</p>
+                    </a>
                 </div>
             </div>
 

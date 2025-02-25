@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}future_military{% endblock title %}
+
+{% block page_css %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAEU ULTRIS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+       
+       body {
+    background: #1d1d1d;
+    color: white;
+    font-family: Arial, sans-serif;
+   
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    opacity: 0.2;
+    text-align: center;
+}
+
+.about {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: purple;
+    text-align: center;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.continue {
+    display: inline-block;
+    margin-top: 20px;
+    color: purple;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+    .container {
+        padding: 30px 15px;
+    }
+    .swiper-slide img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 40px;
+    }
+    .about {
+        font-size: 16px;
+        
+    }
+    .swiper-slide img {
+        max-width: 100%;
+    }
+}
+
+</style>
+{% endblock page_css %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="swiper-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="{% static 'img/img22.jpg' %}" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img14.jpg' %}" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img13.jpg' %}" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img12.jpg' %}" alt="Slide 3"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img11.jpg' %}" alt="Slide 4"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img10.jpg' %}" alt="Slide 5"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img9.jpg' %}" alt="Slide 6"></div>
+                <div class="swiper-slide"><img src="{% static 'img/img8.jpg' %}" alt="Slide 6"></div>
+            </div>
+            <!-- Swiper Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <h1 class="title">TOP 11 FUTURE MILITARY DRONES</h1>
+    <div class="about">
+        <h2>MAKING IMPOSSIBLE POSSIBLE</h2>
+        <p>The top 11 drones redefining 
+            military strategy and technological superiority</p>
+        <!-- <a href="#" class="continue">Continue Reading »</a> -->
+    </div>
+</div>
+
+    
+
+{% endblock content %}
+
+
+
+{% block page_js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+
+{% endblock page_js %}

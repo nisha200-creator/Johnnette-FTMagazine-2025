@@ -18,7 +18,11 @@ urlpatterns = [
     path("page2",views.page2,name='page2'), 
     path("contact",views.Contact,name='contact'),    
     path("subscribe", views.Subscribe, name='subscribe'),
+    path("future_military", views.future_military, name='future_military'),
+    path("AI_STARTUPS", views.AI_STARTUPS, name='AI_STARTUPS'),
+    path("PARADIGM", views.PARADIGM, name='PARADIGM'),
+     path("next_unicorn", views.next_unicorn, name='next_unicorn'),
   
-   
+ 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

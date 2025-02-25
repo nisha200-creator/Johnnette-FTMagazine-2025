@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}future_military{% endblock title %}
+
+{% block page_css %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAEU ULTRIS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+
+
+
+    <style>
+            /* body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        } */
+        .para_container {
+            max-width: 800px;
+            /* background: white; */
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+            margin-top: 10%;
+            margin-left: 25%;
+            margin-bottom: 10%;
+        }
+        .header {
+            background: #b41c1c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .image-container {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .news-content {
+            padding: 10px 0;
+        }
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #b41c1c;
+        }
+        .news-date {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .news-description {
+            font-size: 14px;
+            text-align: justify;
+            color: #333;
+            margin-top: 10px;
+        }
+
+
+   </style>
+{% endblock page_css %}
+{% block content %}
+
+
+
+<div class="para_container">
+    <div class="header">PARADIGM SHIFT IN MARITIME
+        WARFARE</div>
+    <div class="image-container">
+        <img src="{% static '/img/top-10.avif' %}" alt="Breaking News Image">
+    </div>
+    <div class="news-content">
+        <div class="news-date">June 25, 2025</div>
+        <div class="news-title">The degree of maritime supremacy, where the opposing force is incapable of effective interference, will change with the role of 
+            Unmanned Combat Aerial Vehicles (UCAVs)</div>
+        <div class="news-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel ipsum ut ex hendrerit ultricies at ut ligula. Donec a purus ultricies, ornare ante sed, luctus risus.
+            Donec purus turpis eget eget rhoncus. Duis auctor viverra turpis eget pharetra.
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}
+{% block page_js %}
+{% endblock page_js %}

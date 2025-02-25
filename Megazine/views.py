@@ -53,5 +53,17 @@ def Subscribe(request):
     return render(request,'subscribe.html')
 
 
+def future_military(request):
+    return render(request,'future_military.html')
+
+
+def AI_STARTUPS(request):
+    return render(request,'AI_STARTUPS.html')
+
+def PARADIGM(request):
+    return render(request,'PARADIGM.html')
+
+def next_unicorn(request):
+    return render(request,'next_unicorn.html')
 
 

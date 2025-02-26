@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}News{% endblock title %}
+
+{% block page_css %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAEU ULTRIS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=GFS+Didot&family=Great+Vibes&family=IM+Fell+English:ital@0;1&family=Jacquard+12&family=Jacquard+24&display=swap" rel="stylesheet">
+    <style>
+       body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            font-weight:bold;
+            font-style: normal; 
+            font-size: 5rem;    
+        }
+        .low_text {
+            font-family: "Amatic SC", serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 24px;          
+        
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+
+       
+      
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            margin-top: 10%;  
+        }
+        .news-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .news-item {
+            flex: 1 1 100%;
+            position: relative;
+            background: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .news-item img.wedding-announcement {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .news-item .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            width: 80%;
+        }
+        .news-item .overlay-author {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            width: 60%;
+        }
+        @media (min-width: 768px) {
+            .news-item {
+                flex: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .news-item .overlay-text, .news-item .overlay-author {
+                font-size: 16px;
+                padding: 10px;
+                width: 90%;
+            }
+        }
+</style>
+{% endblock page_css %}
+
+
+
+{% block content %}
+<main class="main-content">
+    <h1>NEWS</h1> 
+    <hr>
+    <section class="news-section">
+        <div class="news-item">
+            <h2 class="news-title">Satellite and rocket launches may cause the next environmental disaster after fossil fuels</h2>
+            <h3>By Vineela Sekhar</h3>
+            <p class="highlight-text">In the past 15 years, rocket launches tripled while satellites orbiting Earth surged tenfold. Thus, space debris-out-
+                of-commission satellites and waste rocket stages that fall to Earth has increased in the last decade. According to the International Telecommunications Union, satellite spectrum applications have exceeded 1 million, so this may just be the start. All of these launches may fail, but experts now estimate that there may be 1,000,000 spacecraft orbiting Earth. These launches are mostly due to big constellation projects like SpaceX's Starlink, quote experts. Also Read - Biz Links With India To Stay Strong Despite Diplomatic Crisis: Canada Modern and current rockets use fossil fuels, which create soot that may absorb all the heat and raise Earth's upper atmospheric temperature. Due to satellite burning, aluminium oxide levels are rising, which may upset the planet's thermal balance, Soot and aluminium oxides destroy ozone, the natural gas that protects us from ultraviolet light. A study published in Geophysical Research Letters suggests that aluminium oxide concentrations in the mesosphere, stratosphere, and troposphere's lowest layers may grow by 650 percent in the coming decades, depleting ozone. Another NOAA study from last year found that more soot-producing rocket launches will harm the ozone layer. Researchers also suggested that satellite reentries are producing metallic ash in the stratosphere, which could weaken Earth's magnetic field and allow more cosmic radiation to reach the surface. </p>
+                <img src="{% static '/img/mars3.jpg' %}" alt="Wedding Couple" class="wedding-announcement">
+            
+        </div>
+        <div class="news-item">
+            <div style="position: relative;">
+                <img src="{% static '/img/mars.jpg' %}" alt="Wedding Couple" class="wedding-announcement">
+                <h2 class="overlay-text">'Man Made Aliens': Why Elon Musk's Tesla Optimus could evolve into an extraterrestrial civilisation</h2>
+                <h3 class="overlay-author">By Tarun Mishra</h3>
+            </div>
+            <p class="highlight-text" style="text-align:center;">The dream of colonizing Mars has long been fueled by the visionaries at SpaceX and other space enthusiasts. But before humans can set foot on Mars for long-term settlement, significant groundwork must be laid. This is where Tesla's Optimus, or similar advanced robotics, could play a transformative role. Here's how these humanoid robots might become the first inhabitants of Mars, setting the stage for human arrival.
+                The Initial Deployment:
+                Imagine a fleet of newly launched Tesla Optimus robots descending onto the
+                Martian surface, equipped to endure its harsh conditions. These robots would begin by assembling basic habitats, perhaps starting with inflatable modules or simple structures using materials either transported from Earth or sourced
+                locally. Construction and Maintenance:
+                Using advanced 3D printing or adapted construction techniques, these robots would construct more permanent dwellings, potentially underground to shield against radiation. Their role would extend to ongoing maintenance, repairing breaches or malfunctions that could threaten the integrity of these habitats against Martian dust storms or other environmental hazards. Preparatory Science and Engineering: Before human settlers arrive, Optimus
+                would conduct scientific experiments and engineering feats, from agricultural tests under Martian conditions to setting up safe landing zones. They would ensure that upon human arrival, all systems from life support to communication networks are operational.
+                The Human-Robot Synergy: Once humans land, these robots would
+                transition into assistants, taking on tasks that are hazardous or labor-intensive, enhancing human safety and efficiency. Expansion and Technological Evolution: As the colony grows, so would the tasks for Optimus. They would help expand living areas, build new structures, and adapt to new challenges. Over time, these robots might see upgrades or evolve into more specialised units, tailored for
+                various aspects of Martian life.. Challenges on the Martian Frontier: Energy: Solar power might be</p>
+        </div>
+    </section>
+    <hr>
+    <section class="news-section">
+        <div class="news-item">
+            <p class="highlight-text">supplemented by nuclear energy to ensure continuous operation in Mars' limited sunlight.
+                Durability: Robots must be built to last in one of the most inhospitable environments known.</p>
+            <h3 class="low_text"> EU imposes tariffs of up to 38% on Chinese electric vehicles</h3>
+            <img src="{% static '/img/m4.jpg' %}" alt="Wedding Couple" class="wedding-announcement">
+            <p class="highlight-text">The European Union has imposed extra duties of up to 37.6 percent on imports of electric vehicles (EVs) made in China, the bloc announced, despite Beijing's warnings the move would unleash a trade
+                war.
+                The European Commission said on Thursday that the tariffs were put in place because of "unfair" state subsidies and will kick off on Friday. There is, however, a four-month window during which the tariffs are only provisional and talks are expected to continue between the two sides.
+                The Commission, the EU's executive, launched an investigation last year into Chinese EV manufacturers on whether state subsidies were unfairly undercutting European carmakers.
+                After four months, when the probe concludes, the Commission could propose "definite duties" that would apply for five years and on which the 27-member bloc would vote.
+                The move raises duties from the current level of 10 percent as trade spats widen between the EU and China, especially focusing on green technologies.
+                The provisional duties of between 17.4 percent and 37.6 percent, without backdating, are designed to prevent what Commission President Ursula von der Leyen has said is a threatened flood of cheap EVs built by state subsidies.
+                The provisional duties of between 17.4 percent and 37.6 percent, without backdating, are designed to prevent what Commission President Ursula von der Leyen has said is a threatened flood of cheap EVs built by state subsidies.</p>
+                
+        </div>
+    </section>
+</main>
+
+
+    
+
+{% endblock content %}
+
+
+
+{% block page_js %}
+
+
+
+{% endblock page_js %}

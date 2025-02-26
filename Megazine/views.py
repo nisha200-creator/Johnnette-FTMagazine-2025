@@ -66,4 +66,7 @@ def PARADIGM(request):
 def next_unicorn(request):
     return render(request,'next_unicorn.html')
 
+def news(request):
+    return render(request,'news.html')
+
 

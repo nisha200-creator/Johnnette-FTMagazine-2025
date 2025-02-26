@@ -21,7 +21,8 @@ urlpatterns = [
     path("future_military", views.future_military, name='future_military'),
     path("AI_STARTUPS", views.AI_STARTUPS, name='AI_STARTUPS'),
     path("PARADIGM", views.PARADIGM, name='PARADIGM'),
-     path("next_unicorn", views.next_unicorn, name='next_unicorn'),
+    path("next_unicorn", views.next_unicorn, name='next_unicorn'),
+    path("news", views.news, name='news'),
   
  
 

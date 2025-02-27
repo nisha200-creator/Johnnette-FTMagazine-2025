@@ -91,31 +91,28 @@
         }
     }
 
-/* {% comment %} video {% endcomment %} */
+/* {% comment %} slide bar {% endcomment %} */
 
 
 
 
-        .ad-thumbnail-video-container {
+.ad-thumbnail-video-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            max-width: 100%;
+            padding: 15px;
+            width: 100%;
             overflow: hidden;
         }
-
         .ad-thumbnail {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            align-items: center;   
             width: 100%;
             justify-content: center;
         }
-
         .swiper {
-            width: 80%;
-            max-width: 1000px;
+            width: 100%;
+            max-width: none;
         }
 
         .swiper-slide {
@@ -126,16 +123,18 @@
             background: transparent;
         }
 
+    
         .video-container {
-            position: relative;
             width: 100%;
             max-width: 400px;
-            cursor: pointer;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
         }
-
         .video-container img {
             width: 100%;
-            border-radius: 10px;
+            height: 100%;
+            object-fit: cover;
         }
 
         .play-button {
@@ -352,7 +351,7 @@ h5 {
 
 
 .secondcard {
-    width: 21rem; 
+    width: 26rem; 
     max-width: 100%; 
     border: 1px solid #ddd;
     background-color: #fff;
@@ -1081,6 +1080,80 @@ h5 {
 }
 
 
+/* new added post */
+
+.wrapper {
+            max-width: 1400px;
+            margin: auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 1300px;
+            margin: auto;
+            gap: 20px;
+        }
+        .left-column, .right-column {
+            width: 20%;
+        }
+        .main-column {
+            width: 60%;
+            text-align: center;
+        }
+        .article-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .middle-img{
+            height:800px;
+            width: 100%;
+        }
+        .left-img{
+            height: 250px;
+            width: 100%;
+        }
+        .right-img{
+            height: 120px;
+            width: 99px;
+        }
+
+        .article-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .article-meta {
+            font-size: 14px;
+            color: gray;
+        }
+        .article-container {
+            margin-bottom: 20px;
+        }
+        .right-column .article-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        /* .right-column .article-container img {
+            width: 60px;
+            height: 60px;
+        } */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left-column, .right-column {
+                width: 100%;
+                text-align: center;
+            }
+            .main-column {
+                width: 100%;
+            }
+        }
+
+
 </style>
 {% endblock page_css %} 
 
@@ -1100,55 +1173,6 @@ h5 {
 </div>
 
 
-
-<div class="ad-thumbnail-video-container">
-    <div class="ad-thumbnail">
-        <!-- <button class="arrow-button swiper-button-prev"><i class="fas fa-chevron-left"></i></button> -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="video-container" onclick="openVideo('fullscreenVideo1')">
-                        <a href="video5.html">
-                            <img src="{% static '/img/img1.jpg' %}" alt="ad Thumbnail">
-                        </a>
-                        
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
-                        <a href="video2.html">
-                            <img src="{% static '/img/img6.jpg' %}" alt="ad Thumbnail">
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
-                        <a href="video3.html">
-                            <img src="{% static '/img/img4.jpg' %}" alt="ad Thumbnail">
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
-                        <a href="video4.html">
-                            <img src="{% static '/img/img5.jpg' %}" alt="ad Thumbnail">
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
-                        <a href="video5.html">
-                            <img src="{% static '/img/img3.jpg' %}" alt="ad Thumbnail">
-                        </a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- <button class="arrow-button swiper-button-next"><i class="fas fa-chevron-right"></i></button> -->
-    </div>
-</div>
-
 <!-- <div class="fullscreen-video" id="fullscreenVideo1">
     <span class="close-button" onclick="closeVideo('fullscreenVideo1')">&times;</span>
     <video controls>
@@ -1162,10 +1186,19 @@ h5 {
         <source src="{% static '/videos/ad2.mp4' %}" type="video/mp4">
     </video>
 </div> -->
+<div class="subscription-container">
+    <div class="magazine-cover">
+        <img src="{% static '/img/magazine.jpg' %}" alt="Vogue Magazine Cover">
+    </div>
+    <div class="text">FT-
+        FUTURE  TECHNOLOGIES</div>
+        <a href="{% url 'subscribe' %}" target="_blank">
+            <button class="btn">Subscribe</button>
+          </a>
+</div>
 
 
-
-<div class="card">
+<!-- <div class="card">
     <h3 class=" top-title pb-4 mb-4 border-bottom">
         ARTICLES
      </h3>
@@ -1180,7 +1213,7 @@ h5 {
     </a>
         <p class="card-footer">Last updated 3 mins ago</p>
     </div>
-</div>
+</div> -->
 
 
 
@@ -1228,19 +1261,7 @@ h5 {
         </div>
     </div>
 
-    <div class="secondcard">
-        <img src="{% static '/img/VideoSurveillance.jpg' %}" alt="Card Image" class="box-img">
-        <div class="box-body">
-            <a href="">Technologies</a>
-            <h5 class="title">MAKING USE OF VIDEO 
-                SURVEILLANCE TECHNOLOGY 
-                TO GAIN RETAIL MARKETING</h5>
-            <p class="box-text">The advent of advanced video 
-                surveillance technology has 
-                revolutionized the retail industry</p>
-            <p class="card-footer">Last updated 3 mins ago</p>
-        </div>
-    </div>
+   
 </div>
 
 <!-- advertise -->
@@ -1254,9 +1275,131 @@ h5 {
     </div>
 </div> -->
 
+<!-- new added post -->
+
+<div class="wrapper">
+    <div class="container">
+        <div class="left-column">
+            <div class="article-container">
+                <img src="{% static '/img/Drone2.jpg' %}" alt="Card Image" class="box-img">
+                <div class="article-title">How to Find Your Personal Style</div>
+                <div class="article-meta">By Laia Garcia-Furtado</div>
+            </div>
+            <div class="article-container">
+                <img src="{% static '/img/Drone2.jpg' %}" alt="Card Image" class="box-img">
+                <div class="article-title">The Shape and Texture of Spring Runways</div>
+                <div class="article-meta">Photography by Mikael Jansson</div>
+            </div>
+        </div>
+        <div class="main-column">
+            <img src="{% static '/img/para4.avif' %}" alt="Card Image" class="middle-img">
+            <div class="article-title">Denzel Washington and Jake Gyllenhaal on Bringing Othello to Broadway</div>
+            <div class="article-meta">By Maya Singer | Photography by Annie Leibovitz</div>
+        </div>
+        <div class="right-column">
+            <div class="article-container">
+                
+                <div>
+                    <div class="article-title">The Cropped Trench Coat Trend</div>
+                    <div class="article-meta">By Laura Jackson</div>
+                </div>
+                <img src="{% static '/img/Drone2.jpg' %}" alt="Card Image" class="right-img">
+            </div>
+            <div class="article-container">
+                
+                <div>
+                    <div class="article-title">Millie Bobby Brown's Space Buns</div>
+                    <div class="article-meta">By Anna Cafolla</div>
+                </div>
+                <img src="{% static '/img/Drone2.jpg' %}" alt="Card Image" class="right-img">
+            </div>
+            <div class="article-container">
+                
+                <div>
+                    <div class="article-title">Leighton Meester's Skincare Secret</div>
+                    <div class="article-meta">By Jenny Berg</div>
+                </div>
+                <img src="{% static '/img/Drone2.jpg' %}" alt="Card Image" class="right-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="subscription-container">
+    <div class="magazine-cover">
+        <img src="{% static '/img/magazine.jpg' %}" alt="Vogue Magazine Cover">
+    </div>
+    <div class="text">FT-
+        FUTURE  TECHNOLOGIES</div>
+        <a href="{% url 'subscribe' %}" target="_blank">
+            <button class="btn">Subscribe</button>
+          </a>
+</div>
 
 
 
+
+
+<div class="ad-thumbnail-video-container">
+    <div class="ad-thumbnail">
+   
+        <div class="swiper mySwiper ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="video-container" onclick="openVideo('fullscreenVideo1')">
+                        <a href="">
+                            <img src="{% static '/img/img1.jpg' %}" alt="ad Thumbnail">
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
+                        <a href="">
+                            <img src="{% static '/img/img6.jpg' %}" alt="ad Thumbnail">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
+                        <a href="">
+                            <img src="{% static '/img/img4.jpg' %}" alt="ad Thumbnail">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
+                        <a href="">
+                            <img src="{% static '/img/img5.jpg' %}" alt="ad Thumbnail">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="video-container" onclick="openVideo('fullscreenVideo2')">
+                        <a href="">
+                            <img src="{% static '/img/img3.jpg' %}" alt="ad Thumbnail">
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+  
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- recent post -->
 <div class="row g-5">
     <div class="col-md-7">
         <h3 class=" top-title pb-4 mb-4 border-bottom">
